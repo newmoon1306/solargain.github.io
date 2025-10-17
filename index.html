@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="pt-br">
 <head>
   <meta charset="utf-8">
@@ -8,16 +8,73 @@
     body { font-family: 'Segoe UI', Arial, sans-serif; margin:0; background:#f8fafc; color:#1e293b; }
     header { background:#0f172a; color:#fff; text-align:center; padding:2rem 1rem; }
     header p { margin-top:0.25rem; opacity:0.9; }
-    .galeria { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:1rem; padding:2rem; max-width:1100px; margin:0 auto; }
-    .galeria img { width:100%; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,0.12); transition:transform .25s ease; }
-    .galeria img:hover { transform:scale(1.03); }
+
+    /* ==== GALERIA ==== */
+    .galeria-container {
+      text-align: center;
+      padding: 2rem;
+    }
+    .galeria-container h2 {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+      color: #0f172a;
+    }
+    .galeria-container p {
+      font-size: 1rem;
+      max-width: 700px;
+      margin: 0 auto 2rem auto;
+      color: #475569;
+      line-height: 1.5;
+    }
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* aumentei o minmax */
+      gap: 1.5rem;
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+    .galeria img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .galeria img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 24px rgba(0,0,0,0.15);
+    }
+
+    /* ==== PDFS ==== */
     .pdfs { padding:2rem; background:#e6eef8; text-align:center; }
-    .pdfs h2 { margin:0 0 1rem 0; }
-    .pdf-card { display:inline-block; text-align:left; background:#fff; padding:1rem 1.25rem; margin:0.5rem; border-radius:10px; box-shadow:0 6px 18px rgba(0,0,0,0.08); width:260px; vertical-align:top; }
-    .pdf-card h3 { margin:0 0 .5rem 0; font-size:1rem; }
-    .pdf-card a { display:inline-block; margin-right:.5rem; text-decoration:none; font-weight:600; color:#0b5ed7; }
-    footer { text-align:center; padding:1rem; background:#0f172a; color:#fff; margin-top:1.5rem; }
-    .embed-pdf { width:90%; height:520px; border:1px solid #ddd; border-radius:8px; margin-top:1rem; }
+    .pdfs h2 { margin:0 0 1rem 0; color: #0f172a; }
+    .pdf-card {
+      display:inline-block;
+      text-align:left;
+      background:#fff;
+      padding:1rem 1.25rem;
+      margin:0.5rem;
+      border-radius:10px;
+      box-shadow:0 6px 18px rgba(0,0,0,0.08);
+      width:260px;
+      vertical-align:top;
+    }
+    .pdf-card h3 { margin:0 0 .5rem 0; font-size:1rem; color: #1e293b; }
+    .pdf-card a {
+      display:inline-block;
+      margin-right:.5rem;
+      text-decoration:none;
+      font-weight:600;
+      color:#0b5ed7;
+    }
+    .pdf-card a:hover { text-decoration: underline; }
+
+    footer {
+      text-align:center;
+      padding:1rem;
+      background:#0f172a;
+      color:#fff;
+      margin-top:1.5rem;
+    }
   </style>
 </head>
 <body>
@@ -26,17 +83,26 @@
     <p>Monitoramento inteligente em usinas solares — coleta automática, visualizações e alertas.</p>
   </header>
 
-  <section class="galeria">
-   
-    <img src="imagens/coletadados.png" alt="Captura 1">
-    <img src="imagens/homepage.png" alt="Captura 2">
-    <img src="imagens/coletadia.png" alt="Captura 3">
-    <img src="imagens/graficodia.png" alt="Captura 4">
-    <img src="imagens/coletaano.png" alt="Captura 5">
-    <img src="imagens/graficoano.png" alt="Captura 6">
-    <img src="imagens/envioemail.png" alt="Captura 7">
-    <img src="imagens/statusoff.png" alt="Captura 7">
-    <img src="imagens/statuson.png" alt="Captura 7">
+  <section class="galeria-container">
+    <h2>Imagens do Sistema Web</h2>
+    <p>
+      As imagens abaixo ilustram as principais funcionalidades do sistema desenvolvido: 
+      a página inicial (home page), os módulos de coleta automática de dados, 
+      os gráficos de geração diária e anual, além do envio de e-mails automáticos 
+      de notificação para o cliente e a equipe técnica.
+    </p>
+
+    <div class="galeria">
+      <img src="imagens/coletadados.png" alt="Coleta de dados do inversor">
+      <img src="imagens/homepage.png" alt="Home page do sistema">
+      <img src="imagens/coletadia.png" alt="Coleta de geração diária">
+      <img src="imagens/graficodia.png" alt="Gráfico de geração diária">
+      <img src="imagens/coletaano.png" alt="Coleta de dados anual">
+      <img src="imagens/graficoano.png" alt="Gráfico de geração anual">
+      <img src="imagens/envioemail.png" alt="Envio automático de e-mail">
+      <img src="imagens/statusoff.png" alt="Status de inversor offline">
+      <img src="imagens/statuson.png" alt="Status de inversor online">
+    </div>
   </section>
 
   <section class="pdfs">
@@ -59,10 +125,6 @@
       <a href="pdfs/resumo_2025_reconcitec.pdf" target="_blank">📄 Visualizar</a>
       <a href="pdfs/resumo_2025_reconcitec.pdf" download>⬇️ Baixar</a>
     </div>
-
-    <!-- Exemplo de embed (se quiser mostrar um PDF dentro da página):
-    <iframe class="embed-pdf" src="pdfs/Modelo_Poster_Final.pdf"></iframe>
-    -->
   </section>
 
   <footer>
