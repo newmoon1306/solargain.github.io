@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Projeto Solar - UFRB</title>
+  <style>
+    body { font-family: 'Segoe UI', Arial, sans-serif; margin:0; background:#f8fafc; color:#1e293b; }
+    header { background:#0f172a; color:#fff; text-align:center; padding:2rem 1rem; }
+    header p { margin-top:0.25rem; opacity:0.9; }
+    .galeria { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:1rem; padding:2rem; max-width:1100px; margin:0 auto; }
+    .galeria img { width:100%; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,0.12); transition:transform .25s ease; }
+    .galeria img:hover { transform:scale(1.03); }
+    .pdfs { padding:2rem; background:#e6eef8; text-align:center; }
+    .pdfs h2 { margin:0 0 1rem 0; }
+    .pdf-card { display:inline-block; text-align:left; background:#fff; padding:1rem 1.25rem; margin:0.5rem; border-radius:10px; box-shadow:0 6px 18px rgba(0,0,0,0.08); width:260px; vertical-align:top; }
+    .pdf-card h3 { margin:0 0 .5rem 0; font-size:1rem; }
+    .pdf-card a { display:inline-block; margin-right:.5rem; text-decoration:none; font-weight:600; color:#0b5ed7; }
+    footer { text-align:center; padding:1rem; background:#0f172a; color:#fff; margin-top:1.5rem; }
+    .embed-pdf { width:90%; height:520px; border:1px solid #ddd; border-radius:8px; margin-top:1rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Projeto Solar - UFRB</h1>
+    <p>Monitoramento inteligente em usinas solares — coleta automática, visualizações e alertas.</p>
+  </header>
+
+  <section class="galeria">
+   
+    <img src="imagens/coletadados.png" alt="Captura 1">
+    <img src="imagens/homepage.png" alt="Captura 2">
+    <img src="imagens/coletadia.png" alt="Captura 3">
+    <img src="imagens/graficodia.png" alt="Captura 4">
+    <img src="imagens/coletaano.png" alt="Captura 5">
+    <img src="imagens/graficoano.png" alt="Captura 6">
+    <img src="imagens/envioemail.png" alt="Captura 7">
+    <img src="imagens/statusoff.png" alt="Captura 7">
+    <img src="imagens/statuson.png" alt="Captura 7">
+  </section>
+
+  <section class="pdfs">
+    <h2>Materiais do Projeto</h2>
+
+    <div class="pdf-card">
+      <h3>Banner Reconcitec</h3>
+      <a href="pdfs/banner_2024.pdf" target="_blank">📄 Visualizar</a>
+      <a href="pdfs/banner_2024.pdf" download>⬇️ Baixar</a>
+    </div>
+
+    <div class="pdf-card">
+      <h3>Modelo de Pôster Final</h3>
+      <a href="pdfs/banner_2025.pdf" target="_blank">📄 Visualizar</a>
+      <a href="pdfs/banner_2025.pdf" download>⬇️ Baixar</a>
+    </div>
+
+    <div class="pdf-card">
+      <h3>Modelo Final Reconcitec</h3>
+      <a href="pdfs/resumo_2025_reconcitec.pdf" target="_blank">📄 Visualizar</a>
+      <a href="pdfs/resumo_2025_reconcitec.pdf" download>⬇️ Baixar</a>
+    </div>
+
+    <!-- Exemplo de embed (se quiser mostrar um PDF dentro da página):
+    <iframe class="embed-pdf" src="pdfs/Modelo_Poster_Final.pdf"></iframe>
+    -->
+  </section>
+
+  <footer>
+    © 2025 - Lisandra Silva Conceição | UFRB/CETENS
+  </footer>
+</body>
+</html>
